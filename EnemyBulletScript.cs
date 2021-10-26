@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletYellowScript : MonoBehaviour
+public class EnemyBulletScript : MonoBehaviour
 {
     private float BulletYellowSpeed = 5.0f;
     private GameObject player;
