@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    private float YellowSpeed = 0.5f;
+    private float Speed = 0.5f;
     private float timer;
-    [SerializeField] private GameObject BulletYellow;
+    [SerializeField] private GameObject EnemyBullet;
 
     // Start is called before the first frame update
     void Start()
