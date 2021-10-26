@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;//ここ忘れずに
 
-public class HpBarCtrlScript : MonoBehaviour
+public class HpBarScript : MonoBehaviour
 {
     Slider HpBar;
     float Hp;
