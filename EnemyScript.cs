@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyYellowScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     private float YellowSpeed = 0.5f;
     private float timer;
@@ -11,18 +11,17 @@ public class EnemyYellowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, 40f);
+        Destroy(this.gameObject, 30.0f);
     }
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-
         this.transform.position -= new Vector3(0, YellowSpeed * Time.deltaTime, 0);
 
-        if (timer > 3f)
+        if (timer > 3.0f)
         {
-            Instantiate(BulletYellow, this.transform.position, Quaternion.Euler(0, 0, 0));
+            Instantiate(EnemyBullet, this.transform.position, Quaternion.Euler(0, 0, 0));
             timer = 0;
         }
     }
