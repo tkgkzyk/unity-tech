@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    int count;
-    public Text countText;
-    public Text timerText;
-    float timer = 10.0f;
-    public Text buttonText;
-    public GameObject rendaSound;
-    bool isPlaying = false;
+    private int count;
+    [SerializeField] private Text countText;
+    [SerializeField] private Text timerText;
+    private float timer = 10.0f;
+    [SerializeField] private public Text buttonText;
+    [SerializeField] private GameObject rendaSound;
+    priavte bool isPlaying = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        buttonText.text = "スタート";
+        buttonText.text = "Start";
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class GameManagerScript : MonoBehaviour
             isPlaying = false;
             timer = 0;
             timerText.text = timer.ToString("f2");
-            buttonText.text = "終わり！";
+            buttonText.text = "End";
 
             PlayerPrefs.SetInt("score", count);
             SceneManager.LoadScene("EndScene");
@@ -46,9 +46,9 @@ public class GameManagerScript : MonoBehaviour
     {
         if (isPlaying == true)
         {
-            count += 1;
+            count ++;
             countText.text = count.ToString();
-            //count ++ 1; でも良い
+
 	　　GameObject rendaSoundClone = Instantiate(rendaSound)as GameObject;
 	　　Destroy(rendaSoundClone, 3.0f);
             Debug.Log(count);
@@ -56,7 +56,7 @@ public class GameManagerScript : MonoBehaviour
         else
         {
             isPlaying = true;
-            buttonText.text = "押せ！";
+            buttonText.text = "Push";
             countText.text = "0";
         }
     }
