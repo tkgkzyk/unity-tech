@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBulletScript : MonoBehaviour
 {
-    private float BulletYellowSpeed = 5.0f;
+    private float Speed = 5.0f;
     private GameObject player;
     private Vector3 playerPos;
 
@@ -19,6 +19,6 @@ public class EnemyBulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, playerPos, Time.deltaTime * BulletYellowSpeed);
+        this.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, playerPos, Time.deltaTime * Speed);
     }
 }
