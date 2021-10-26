@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;//ここ忘れずに
+using UnityEngine.UI;//ここ忘れがち
 
 public class HpBarScript : MonoBehaviour
 {
