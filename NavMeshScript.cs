@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class NavMeshScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject target;
+    [SerializeField] private GameObject target;
     private NavMeshAgent agent;
 
     // Start is called before the first frame update
