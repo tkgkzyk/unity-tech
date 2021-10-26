@@ -17,7 +17,7 @@ public class Ray3dScript : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Physics.Raycast(ray, out hit, 1000.0f);
+        Physics.Raycast(ray, out hit, 10.0f);
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -27,5 +27,23 @@ public class Ray3dScript : MonoBehaviour
                 Debug.Log(count);
             }
         }
+
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.red, 5); //Rayの描写
+
+        /*オブジェクトが複数存在する時
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        foreach (RaycastHit hit in Physics.RaycastAll(ray))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.collider)
+                {
+                    count++;
+                    Debug.Log(count);
+                }
+            }
+        }*/
     }
 }
