@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class EndSceneManager : MonoBehaviour
 {
-    public Text LastScoreText;
-    public Text HighScoreText;
-    int LastScore;
-    int HighScore;
+    [SerializeField] private Text LastScoreText;
+    [SerializeField] private Text HighScoreText;
+    private int LastScore;
+    private int HighScore;
 
     void Start()
     {
